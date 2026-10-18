@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customers | Wine & Beer Store</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="main-header dashboard-header">
+    <div class="logo">
+      <i class="fa-solid fa-wine-bottle"></i>
+      <span>Wine & Beer Store</span>
+    </div>
+    <a href="dashboard.html">
+      <button id="logoutBtn" class="btn btn-logout">
+        <i class="fa-solid fa-right-from-bracket">
+          <t>Dashboard</t>
+      </button></i></a>
+  </header>
+
+  <!-- ===== MAIN WRAPPER ===== -->
+  <div class="main-wrapper">
+
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar">
+      <ul class="sidebar-menu">
+        <li><a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+        <li><a href="inventory.html"><i class="fas fa-boxes"></i> Inventory</a></li>
+        <li><a href="sales.html"><i class="fas fa-shopping-cart"></i> Sales</a></li>
+        <li><a href="reports.html"><i class="fas fa-chart-line"></i> Reports</a></li>
+        <li><a href="suppliers.html"><i class="fas fa-truck"></i> Suppliers</a></li>
+        <li><a href="customers.html" class="active"><i class="fas fa-users"></i> Customers</a></li>
+        <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+      </ul>
+    </aside>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="content">
+      <section class="inventory-section">
+        <h2>Manage Customers</h2>
+
+        <!-- Add Customer Form -->
+        <form id="customerForm">
+          <div class="form-group">
+            <input type="text" id="customerName" placeholder="Customer Name" required>
+          </div>
+          <div class="form-group">
+            <input type="text" id="customerContact" placeholder="Contact Number" required>
+          </div>
+          <div class="form-group">
+            <input type="text" id="customerAddress" placeholder="Address" required>
+          </div>
+          <button type="submit" class="btn primary"><i class="fas fa-plus-circle"></i> Add Customer</button>
+        </form>
+
+        <!-- Customers Table -->
+        <h3>Customers List</h3>
+        <table id="customersTable">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Contact</th>
+              <th>Address</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Customer data will be injected dynamically here -->
+          </tbody>
+        </table>
+
+      </section>
+    </main>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <p>© 2025 Wine & Beer Store Inventory System</p>
+  </footer>
+
+  <!-- ===== JS ===== -->
+  <script src="../assets/js/customers.js"></script>
+</body>
+
+</html>

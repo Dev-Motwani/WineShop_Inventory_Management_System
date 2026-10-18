@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings | Wine & Beer Store</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- jsPDF CDN for PDF export -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="main-header dashboard-header">
+    <div class="logo">
+      <i class="fa-solid fa-wine-bottle"></i>
+      <span>Wine & Beer Store</span>
+    </div>
+    <a href="dashboard.html">
+      <button id="logoutBtn" class="btn btn-logout">
+        <i class="fa-solid fa-right-from-bracket">
+          <t>Dashboard</t>
+      </button></i></a>
+  </header>
+
+  <!-- ===== MAIN WRAPPER ===== -->
+  <div class="main-wrapper">
+
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar">
+      <ul class="sidebar-menu">
+        <li><a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+        <li><a href="inventory.html"><i class="fas fa-boxes"></i> Inventory</a></li>
+        <li><a href="sales.html"><i class="fas fa-shopping-cart"></i> Sales</a></li>
+        <li><a href="reports.html"><i class="fas fa-chart-line"></i> Reports</a></li>
+        <li><a href="suppliers.html"><i class="fas fa-truck"></i> Suppliers</a></li>
+        <li><a href="customers.html"><i class="fas fa-users"></i> Customers</a></li>
+        <li><a href="settings.html" class="active"><i class="fas fa-cog"></i> Settings</a></li>
+      </ul>
+    </aside>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="content">
+      <section class="inventory-section">
+        <h2>Settings</h2>
+
+        <!-- ===== Company Info ===== -->
+        <div class="settings-group">
+          <h3>Company Information</h3>
+          <input type="text" id="companyName" placeholder="Company Name">
+          <input type="text" id="companyAddress" placeholder="Company Address">
+          <input type="text" id="gstNumber" placeholder="GST Number">
+          <input type="email" id="companyEmail" placeholder="Email">
+          <button id="saveCompanyBtn" class="btn primary"><i class="fas fa-save"></i> Save Company Info</button>
+        </div>
+
+        <!-- ===== Change Password ===== -->
+        <div class="settings-group">
+          <h3>Change Password</h3>
+          <input type="password" id="oldPassword" placeholder="Current Password">
+          <input type="password" id="newPassword" placeholder="New Password">
+          <button id="changePasswordBtn" class="btn primary"><i class="fas fa-key"></i> Change Password</button>
+        </div>
+
+        <!-- ===== Export Data as PDF ===== -->
+        <div class="settings-group">
+          <h3>Export Data</h3>
+          <button id="exportDataBtn" class="btn primary">
+            <i class="fas fa-file-pdf"></i> Export as PDF
+          </button>
+        </div>
+
+        <!-- ===== Import Data ===== -->
+        <div class="settings-group">
+          <h3>Import Data</h3>
+          <input type="file" id="importFile" accept=".json">
+          <button id="importDataBtn" class="btn primary">
+            <i class="fas fa-upload"></i> Import JSON
+          </button>
+        </div>
+
+        <!-- ===== Reset Data ===== -->
+        <div class="settings-group">
+          <h3>Reset / Clear All Data</h3>
+          <button id="resetDataBtn" class="btn delete">
+            <i class="fas fa-trash-alt"></i> Clear All Data
+          </button>
+        </div>
+
+      </section>
+    </main>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <p>© 2025 Wine & Beer Store Inventory System</p>
+  </footer>
+
+  <!-- ===== JS ===== -->
+  <script src="../assets/js/settings.js"></script>
+</body>
+
+</html>

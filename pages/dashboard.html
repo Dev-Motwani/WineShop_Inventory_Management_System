@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | Wine & Beer Store</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="main-header dashboard-header">
+        <div class="logo">
+            <i class="fa-solid fa-wine-bottle"></i>
+            <span>Wine & Beer Store</span>
+        </div>
+
+        <!-- Hamburger Menu for Mobile -->
+        <i class="fas fa-bars menu-toggle"></i>
+
+        <div class="user-info">
+            <span id="welcomeUser"></span>
+            <a href="../index.html">
+                <button id="logoutBtn" class="btn btn-logout">
+                    <i class="fa-solid fa-right-from-bracket"></i> Logout
+                </button>
+            </a>
+        </div>
+    </header>
+
+    <!-- ===== MAIN WRAPPER ===== -->
+    <div class="main-wrapper">
+
+        <!-- ===== SIDEBAR ===== -->
+        <aside class="sidebar">
+            <ul class="sidebar-menu">
+                <li><a href="dashboard.html" class="active"><i class="fa-solid fa-gauge"></i> Dashboard</a></li>
+                <li><a href="inventory.html"><i class="fa-solid fa-box"></i> Inventory</a></li>
+                <li><a href="sales.html"><i class="fa-solid fa-cash-register"></i> Sales</a></li>
+                <li><a href="reports.html"><i class="fa-solid fa-chart-line"></i> Reports</a></li>
+                <li><a href="suppliers.html"><i class="fa-solid fa-truck"></i> Suppliers</a></li>
+                <li><a href="customers.html"><i class="fa-solid fa-user-group"></i> Customers</a></li>
+                <li><a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a></li>
+            </ul>
+        </aside>
+
+        <!-- ===== MAIN CONTENT ===== -->
+        <main class="content">
+            <h2><i class="fa-solid fa-gauge"></i> Dashboard Overview</h2>
+            <div class="stats-grid">
+
+                <div class="stat-card">
+                    <i class="fa-solid fa-box"></i>
+                    <h3 id="totalProducts">0</h3>
+                    <p>Total Products</p>
+                </div>
+
+                <div class="stat-card">
+                    <i class="fa-solid fa-receipt"></i>
+                    <h3 id="totalSales">0</h3>
+                    <p>Total Sale Records</p>
+                </div>
+
+                <div class="stat-card">
+                    <i class="fa-solid fa-cash-register"></i>
+                    <h3 id="todaySales">₹0</h3>
+                    <p>Today's Sales</p>
+                </div>
+
+                <div class="stat-card">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <h3 id="monthlySales">₹0</h3>
+                    <p>Monthly Sales</p>
+                </div>
+
+                <div class="stat-card">
+                    <i class="fa-solid fa-user-group"></i>
+                    <h3 id="totalCustomers">0</h3>
+                    <p>Customers</p>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <p>&copy; 2025 Wine & Beer Store | Inventory Management System</p>
+    </footer>
+
+    <!-- ===== GLOBAL LAYOUT JS ===== -->
+    <script src="../assets/js/layout.js"></script>
+
+    <!-- ===== DASHBOARD SPECIFIC JS ===== -->
+    <script src="../assets/js/dashboard.js"></script>
+
+</body>
+</html>

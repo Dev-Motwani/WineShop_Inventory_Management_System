@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventory Management | Wine & Beer Store</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="main-header dashboard-header">
+    <div class="logo">
+      <i class="fa-solid fa-wine-bottle"></i>
+      <span>Wine & Beer Store</span>
+    </div>
+
+    <!-- Hamburger Menu for Mobile -->
+    <i class="fas fa-bars menu-toggle"></i>
+
+    <a href="dashboard.html">
+      <button id="logoutBtn" class="btn btn-logout">
+        <i class="fa-solid fa-right-from-bracket"> <t>Dashboard</t>
+      </button></i></a>
+  </header>
+
+  <!-- ===== MAIN WRAPPER ===== -->
+  <div class="main-wrapper">
+
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar">
+      <ul class="sidebar-menu">
+        <li><a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+        <li><a href="inventory.html" class="active"><i class="fas fa-boxes"></i> Inventory</a></li>
+        <li><a href="sales.html"><i class="fas fa-shopping-cart"></i> Sales</a></li>
+        <li><a href="reports.html"><i class="fas fa-chart-line"></i> Reports</a></li>
+        <li><a href="suppliers.html"><i class="fas fa-truck"></i> Suppliers</a></li>
+        <li><a href="customers.html"><i class="fas fa-users"></i> Customers</a></li>
+        <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+      </ul>
+    </aside>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="content">
+      <section class="inventory-section">
+        <h2>Manage Inventory</h2>
+
+        <!-- Add Item Form -->
+        <form id="inventoryForm">
+          <div class="form-group">
+            <input type="text" id="productName" placeholder="Product Name" required>
+          </div>
+          <div class="form-group">
+            <select id="category" required>
+              <option value="">Select Category</option>
+              <option value="Beer">Beer</option>
+              <option value="Whiskey">Whiskey</option>
+              <option value="Wine">Wine</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <input type="text" id="brand" placeholder="Brand / Company" required>
+          </div>
+          <div class="form-group">
+            <input type="number" id="quantity" placeholder="Quantity" required>
+          </div>
+          <div class="form-group">
+            <input type="number" id="price" placeholder="Price (₹)" required>
+          </div>
+          <button type="submit" class="btn primary"><i class="fas fa-plus-circle"></i> Add Item</button>
+        </form>
+
+        <!-- Inventory Table -->
+        <h3>Current Stock</h3>
+        <table id="inventoryTable">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Category</th>
+              <th>Brand</th>
+              <th>Quantity</th>
+              <th>Price (₹)</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Inventory data will be injected dynamically here -->
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <p>© 2025 Wine & Beer Store Inventory System</p>
+  </footer>
+
+  <!-- ===== GLOBAL LAYOUT JS (Sidebar Toggle) ===== -->
+  <script src="../assets/js/layout.js"></script>
+
+  <!-- ===== INVENTORY PAGE JS ===== -->
+  <script src="../assets/js/inventory.js"></script>
+
+</body>
+
+</html>

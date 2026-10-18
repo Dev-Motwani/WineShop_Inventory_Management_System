@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reports | Wine & Beer Store</title>
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+  <!-- ===== HEADER ===== -->
+  <header class="main-header dashboard-header">
+    <div class="logo">
+      <i class="fa-solid fa-wine-bottle"></i>
+      <span>Wine & Beer Store</span>
+    </div>
+    <a href="dashboard.html" class="btn btn-logout">
+      <i class="fa-solid fa-right-from-bracket"></i> Dashboard
+    </a>
+  </header>
+
+  <!-- ===== MAIN WRAPPER ===== -->
+  <div class="main-wrapper">
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar">
+      <ul class="sidebar-menu">
+        <li><a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+        <li><a href="inventory.html"><i class="fas fa-boxes"></i> Inventory</a></li>
+        <li><a href="sales.html"><i class="fas fa-shopping-cart"></i> Sales</a></li>
+        <li><a href="reports.html" class="active"><i class="fas fa-chart-line"></i> Reports</a></li>
+        <li><a href="suppliers.html"><i class="fas fa-truck"></i> Suppliers</a></li>
+        <li><a href="customers.html"><i class="fas fa-users"></i> Customers</a></li>
+        <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+      </ul>
+    </aside>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="content">
+      <section class="inventory-section">
+        <h2>Reports</h2>
+
+        <!-- Daily Sales Report -->
+        <h3>Daily Sales</h3>
+        <table id="dailySalesTable">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Quantity Sold</th>
+              <th>Total Price (₹)</th>
+              <th>Customer</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+
+        <!-- Monthly Sales Report -->
+        <h3>Monthly Sales</h3>
+        <table id="monthlySalesTable">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Quantity Sold</th>
+              <th>Total Price (₹)</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+
+        <!-- Inventory Summary -->
+        <h3>Inventory Summary</h3>
+        <table id="inventorySummaryTable">
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Brand/Company</th>
+              <th>Total Stock</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <p>© 2025 Wine & Beer Store Inventory System</p>
+  </footer>
+
+  <!-- ===== JS FILES ===== -->
+  <script src="../assets/js/layout.js"></script>
+  <script src="../assets/js/reports.js"></script>
+</body>
+</html>
